@@ -6,12 +6,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
 
-
-
 browser = webdriver.Chrome()
 browser.get('http://appstage.sustainonline.com/')
 time.sleep(1)
-# browser.maximize_window()
+browser.maximize_window()
 browser.find_element_by_link_text('Close').click()
 
 uname = browser.find_element_by_name('login')
@@ -27,7 +25,7 @@ logIn_button.click()
 course_form = browser.find_elements_by_class_name('so-course-card-title')[0]
 course_form.click()
 # select sub course
-sub_course = browser.find_elements_by_class_name('so-course-card-small')[5]
+sub_course = browser.find_elements_by_class_name('so-course-card-small')[4]
 sub_course.click()
 time.sleep(10)
 
